@@ -23,13 +23,10 @@ const profileCards = document.querySelectorAll('.profile-card');
 const profileMessage = document.getElementById('profileMessage');
 
 if (profileCards.length) {
-  const storedEmail = localStorage.getItem('netflixUserEmail') || 'usuário';
-
   profileCards.forEach((card) => {
     card.addEventListener('click', function () {
       const profileName = this.dataset.name;
       localStorage.setItem('selectedProfile', profileName);
-      profileMessage.textContent = `${storedEmail} entrou no perfil ${profileName}.`;
       window.location.href = 'home.html';
     });
   });
