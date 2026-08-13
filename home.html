@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix - Página Inicial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="home-body">
+    <header class="home-header">
+      <nav class="home-navbar">
+        <div class="logo">NETFLIX</div>
+
+        <div class="nav-links">
+          <span>Início</span>
+          <span>Séries</span>
+          <span>Filmes</span>
+          <span>Bombando</span>
+          <span>Minha lista</span>
+        </div>
+
+        <div class="nav-profile">
+          <span>Perfil: <strong id="currentProfile">Usuário</strong></span>
+        </div>
+      </nav>
+
+      <section class="featured-show">
+        <div class="featured-content">
+          <p class="featured-tag">SÉRIE</p>
+          <h1>Dark</h1>
+          <p class="featured-description">
+            Uma história de mistério, viagens no tempo e segredos que podem mudar o destino de todos.
+          </p>
+
+          <div class="featured-actions">
+            <button class="btn btn-primary">▶ Assistir</button>
+            <button class="btn btn-secondary">＋ Minha lista</button>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main class="home-main">
+      <div id="mediaSections" class="media-sections"></div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
