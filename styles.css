@@ -198,6 +198,12 @@ body {
   font-size: 2.5rem;
   font-weight: 700;
   border: 3px solid rgba(255, 255, 255, 0.15);
+  object-fit: cover;
+  background: #1f2937;
+}
+
+.profile-avatar {
+  display: block;
 }
 
 .avatar-red {
