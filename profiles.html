@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfis - Netflix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="profiles-page">
+      <div class="profiles-container">
+        <p class="profiles-label">Quem está assistindo?</p>
+        <h1>Escolha um perfil</h1>
+
+        <div class="profiles-grid">
+          <button class="profile-card" data-name="Bernardo">
+            <span class="avatar avatar-red">B</span>
+            <span>Bernardo</span>
+          </button>
+
+          <button class="profile-card" data-name="Bruna">
+            <span class="avatar avatar-blue">B</span>
+            <span>Bruna</span>
+          </button>
+        </div>
+
+        <p id="profileMessage" class="profile-message"></p>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

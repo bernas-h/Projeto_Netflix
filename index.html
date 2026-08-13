@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="navbar">
+        <div class="logo">NETFLIX</div>
+        <div class="nav-actions">
+          <button class="btn btn-primary">Entrar</button>
+        </div>
+      </nav>
+
+      <div class="hero-content">
+        <p class="eyebrow">Filmes, séries e muito mais.</p>
+        <h1>Assista onde quiser.</h1>
+        <p class="subtitle">
+          Planeje assistir a novos sucessos, filmes favoritos e séries exclusivas.
+        </p>
+
+        <form class="signup" id="signupForm">
+          <input
+            type="email"
+            id="emailInput"
+            placeholder="Digite seu e-mail"
+            aria-label="E-mail"
+          />
+          <button type="submit" class="btn btn-primary large">Vamos lá</button>
+        </form>
+
+        <p id="message" class="message" aria-live="polite"></p>
+      </div>
+    </header>
+
+    <main class="features">
+      <section class="feature-card">
+        <div>
+          <p class="feature-label">Aproveite em qualquer lugar</p>
+          <h2>Assista no celular, tablet, TV ou notebook.</h2>
+        </div>
+      </section>
+
+      <section class="feature-card alt">
+        <div>
+          <p class="feature-label">Para toda a família</p>
+          <h2>Explore títulos para crianças, adultos e fãs de aventura.</h2>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

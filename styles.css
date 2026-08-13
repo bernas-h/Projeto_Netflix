@@ -1,0 +1,272 @@
+:root {
+  --bg: #0b0b0f;
+  --panel: #111827;
+  --card: #1f2937;
+  --text: #f3f4f6;
+  --muted: #d1d5db;
+  --primary: #e50914;
+  --primary-dark: #b20710;
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+    url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  padding: 24px 5vw 80px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  color: var(--primary);
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  border: none;
+  border-radius: 6px;
+  padding: 12px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-secondary {
+  background: rgba(17, 24, 39, 0.8);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.hero-content {
+  max-width: 760px;
+  margin: 120px auto 0;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 1.2rem;
+  letter-spacing: 0.05rem;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.hero-content h1 {
+  margin-top: 16px;
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  line-height: 1.1;
+}
+
+.subtitle {
+  margin-top: 18px;
+  font-size: 1.25rem;
+  color: var(--muted);
+}
+
+.signup {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.signup input {
+  flex: 1 1 320px;
+  max-width: 440px;
+  padding: 18px 16px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 1rem;
+  background: rgba(17, 24, 39, 0.75);
+  color: var(--text);
+}
+
+.signup input::placeholder {
+  color: #9ca3af;
+}
+
+.large {
+  padding: 18px 28px;
+  font-size: 1rem;
+}
+
+.message {
+  min-height: 24px;
+  margin-top: 20px;
+  color: #fbbf24;
+  font-weight: 500;
+}
+
+.profiles-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #0b0b0f;
+  color: white;
+  padding: 40px 20px;
+}
+
+.profiles-container {
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+}
+
+.profiles-label {
+  color: #d1d5db;
+  text-transform: uppercase;
+  letter-spacing: 0.12rem;
+  margin-bottom: 12px;
+  font-size: 0.8rem;
+}
+
+.profiles-container h1 {
+  font-size: clamp(2.1rem, 4vw, 3.5rem);
+  margin-bottom: 40px;
+}
+
+.profiles-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+
+.profile-card {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-4px);
+  opacity: 0.9;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  border: 3px solid rgba(255, 255, 255, 0.15);
+}
+
+.avatar-red {
+  background: #d32f2f;
+}
+
+.avatar-blue {
+  background: #1976d2;
+}
+
+.avatar-green {
+  background: #388e3c;
+}
+
+.profile-message {
+  margin-top: 28px;
+  min-height: 24px;
+  color: #fbbf24;
+  font-weight: 600;
+}
+
+.features {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 5vw 80px;
+  display: grid;
+  gap: 20px;
+}
+
+.feature-card {
+  background: linear-gradient(135deg, #111827, #1f2937);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: clamp(24px, 4vw, 40px);
+}
+
+.feature-card.alt {
+  background: linear-gradient(135deg, #1f2937, #111827);
+}
+
+.feature-label {
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  color: #fca5a5;
+  font-size: 0.8rem;
+  margin-bottom: 12px;
+}
+
+.feature-card h2 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  line-height: 1.2;
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .hero-content {
+    margin-top: 72px;
+  }
+
+  .signup {
+    flex-direction: column;
+  }
+
+  .signup input,
+  .signup button {
+    width: 100%;
+  }
+}
