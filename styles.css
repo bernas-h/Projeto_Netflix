@@ -273,7 +273,7 @@ body {
 .home-header {
   min-height: 720px;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)),
-    url('https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    url('images/capadark.jpg') center/cover no-repeat;
   padding: 24px 5vw 0;
 }
 

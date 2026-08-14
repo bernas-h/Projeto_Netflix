@@ -37,24 +37,29 @@ const homeData = [
     title: 'Em alta',
     items: [
       {
-        title: 'Velozes e Furiosos',
-        poster: 'https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=900&q=80',
-        trailer: 'https://www.w3schools.com/html/mov_bbb.mp4'
+        title: 'Dark',
+        poster: 'images/capadark.jpg',
+        trailer: 'videos/traillerdark.mp4'
       },
       {
-        title: 'A Vida é Bela',
-        poster: 'https://images.unsplash.com/photo-1513106580091-1d82408b8cd6?auto=format&fit=crop&w=900&q=80',
-        trailer: 'https://www.w3schools.com/html/movie.mp4'
+        title: 'Vingadores',
+        poster: 'images/capavingadores.jpg',
+        trailer: 'videos/traillervingadores.mp4'
       },
       {
-        title: 'A Saga',
-        poster: 'https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=900&q=80',
-        trailer: 'https://www.w3schools.com/html/mov_bbb.mp4'
+        title: 'Moana',
+        poster: 'images/capamoana.jpg',
+        trailer: 'videos/traillermoana.mp4'
       },
       {
-        title: 'Nova Aventura',
-        poster: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80',
-        trailer: 'https://www.w3schools.com/html/movie.mp4'
+        title: 'The Walking Dead',
+        poster: 'images/capatwd.jpg',
+        trailer: 'videos/traillertwd.mp4'
+      },
+      {
+        title: 'Tropa de Elite',
+        poster: 'images/capatropadeelite.jpg',
+        trailer: 'videos/traillertropadeelite.mp4'
       }
     ]
   },
@@ -147,18 +152,19 @@ if (mediaSections) {
 
       card.addEventListener('mouseenter', () => {
         const video = card.querySelector('.media-trailer');
-        if (video) {
-          video.currentTime = 0;
-          video.play().catch(() => {});
-        }
+        if (!video) return;
+
+        video.load();
+        video.currentTime = 0;
+        video.play().catch(() => {});
       });
 
       card.addEventListener('mouseleave', () => {
         const video = card.querySelector('.media-trailer');
-        if (video) {
-          video.pause();
-          video.currentTime = 0;
-        }
+        if (!video) return;
+
+        video.pause();
+        video.currentTime = 0;
       });
 
       list.appendChild(card);
