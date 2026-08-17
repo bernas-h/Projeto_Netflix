@@ -1,3 +1,13 @@
+// Toca o áudio na página principal se vindo do clique no perfil
+if (localStorage.getItem('playAudio') === 'true') {
+  const audio = new Audio('audio/audionerdflix.mp3');
+  audio.volume = 1;
+  audio.play().catch(error => {
+    console.log('Erro ao tocar áudio:', error);
+  });
+  localStorage.removeItem('playAudio');
+}
+
 const signupForm = document.getElementById('signupForm');
 const emailInput = document.getElementById('emailInput');
 const message = document.getElementById('message');
@@ -27,6 +37,15 @@ if (profileCards.length) {
     card.addEventListener('click', function () {
       const profileName = this.dataset.name;
       localStorage.setItem('selectedProfile', profileName);
+      localStorage.setItem('playAudio', 'true');
+      
+      // Toca o áudio e redireciona imediatamente
+      const audio = new Audio('audio/audionerdflix.mp3');
+      audio.volume = 1;
+      audio.play().catch(error => {
+        console.log('Erro ao tocar áudio:', error);
+      });
+      
       window.location.href = 'home.html';
     });
   });
@@ -87,31 +106,6 @@ const homeData = [
         trailer: 'videos/traillerpeakyblinders.mp4'
       }
     ]
-  },
-  {
-    title: 'Continue assistindo',
-    items: [
-      {
-        title: 'Nação',
-        poster: 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=900&q=80',
-        trailer: 'https://www.w3schools.com/html/mov_bbb.mp4'
-      },
-      {
-        title: 'O Último',
-        poster: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80',
-        trailer: 'https://www.w3schools.com/html/movie.mp4'
-      },
-      {
-        title: 'Estrada',
-        poster: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80',
-        trailer: 'https://www.w3schools.com/html/mov_bbb.mp4'
-      },
-      {
-        title: 'Rumo',
-        poster: 'https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=900&q=80',
-        trailer: 'https://www.w3schools.com/html/movie.mp4'
-      }
-    ]
   }
 ];
 
@@ -145,6 +139,9 @@ if (mediaSections) {
         <video class="media-trailer" muted loop playsinline preload="metadata" poster="${item.poster}">
           <source src="${item.trailer}" type="video/mp4" />
         </video>
+        <div class="media-progress">
+          <div class="media-progress-bar"></div>
+        </div>
         <div class="media-info">
           <strong>${item.title}</strong>
         </div>
@@ -152,19 +149,34 @@ if (mediaSections) {
 
       card.addEventListener('mouseenter', () => {
         const video = card.querySelector('.media-trailer');
+        const progressBar = card.querySelector('.media-progress-bar');
         if (!video) return;
 
         video.load();
         video.currentTime = 0;
         video.play().catch(() => {});
+
+        // Atualiza a barra de progresso durante a reprodução
+        const updateProgress = () => {
+          if (video.duration) {
+            const progress = (video.currentTime / video.duration) * 100;
+            progressBar.style.width = progress + '%';
+          }
+          if (!video.paused) {
+            requestAnimationFrame(updateProgress);
+          }
+        };
+        updateProgress();
       });
 
       card.addEventListener('mouseleave', () => {
         const video = card.querySelector('.media-trailer');
+        const progressBar = card.querySelector('.media-progress-bar');
         if (!video) return;
 
         video.pause();
         video.currentTime = 0;
+        progressBar.style.width = '0%';
       });
 
       list.appendChild(card);
@@ -174,3 +186,4 @@ if (mediaSections) {
     mediaSections.appendChild(sectionEl);
   });
 }
+
