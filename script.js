@@ -67,24 +67,24 @@ const homeData = [
     title: 'Séries para você',
     items: [
       {
-        title: 'Mistério',
-        poster: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80',
-        trailer: 'https://www.w3schools.com/html/mov_bbb.mp4'
+        title: 'Friends',
+        poster: 'images/capafriends.webp',
+        trailer: 'videos/traillerfriends.mp4'
       },
       {
-        title: 'Futuro',
-        poster: 'https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=900&q=80',
-        trailer: 'https://www.w3schools.com/html/movie.mp4'
+        title: 'Breaking Bad',
+        poster: 'images/capabreakingbad.jpg',
+        trailer: 'videos/traillerbreakingbad.mp4'
       },
       {
-        title: 'Noite',
-        poster: 'https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?auto=format&fit=crop&w=900&q=80',
-        trailer: 'https://www.w3schools.com/html/mov_bbb.mp4'
+        title: 'Vikings',
+        poster: 'images/capavikings.jpg',
+        trailer: 'videos/traillervikings.mp4'
       },
       {
-        title: 'A Cidade',
-        poster: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=900&q=80',
-        trailer: 'https://www.w3schools.com/html/movie.mp4'
+        title: 'Peaky Blinders',
+        poster: 'images/capapeakyblinders.jpg',
+        trailer: 'videos/traillerpeakyblinders.mp4'
       }
     ]
   },
