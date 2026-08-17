@@ -14,7 +14,7 @@ if (signupForm) {
       return;
     }
 
-    localStorage.setItem('netflixUserEmail', email);
+    localStorage.setItem('nerdflixUserEmail', email);
     window.location.href = 'profiles.html';
   });
 }
